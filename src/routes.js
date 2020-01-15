@@ -1,9 +1,11 @@
 const { Router } = require('express')
 const routes = Router();
+const DevController = require('./controllers/DevController');
+const SearchController = require('./controllers/SearchController');
 
+routes.get('/devs', DevController.index)
+routes.post('/devs', DevController.store)
 
-routes.post('/', (request, response)=>{
-    return response.json({message:'Hello Omnistack'});
-})
+routes.get('/search', SearchController.index )
 
 module.exports = routes;

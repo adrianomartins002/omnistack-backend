@@ -9,6 +9,9 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-k9a9f.mongodb.net/w
     useUnifiedTopology: true
 });
 
+app.use(express.json());
+
+app.use(routes);
 
 //Métodos http: get, post, put, delete
 
